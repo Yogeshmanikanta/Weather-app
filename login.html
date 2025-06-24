@@ -1,0 +1,108 @@
+<!-- login.html -->
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Login - WeatherCast</title>
+		<link rel="stylesheet" href="css/style.css" />
+		<style>
+			.auth-container {
+				max-width: 400px;
+				margin: 5rem auto;
+				padding: 2rem;
+				background-color: rgba(0, 0, 0, 0.3);
+				backdrop-filter: blur(10px);
+				border-radius: 15px;
+				box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+			}
+
+			.auth-container h2 {
+				text-align: center;
+				margin-bottom: 2rem;
+				color: #ffcc00;
+			}
+
+			.auth-form .form-group {
+				margin-bottom: 1.5rem;
+			}
+
+			.auth-form label {
+				display: block;
+				margin-bottom: 0.5rem;
+				font-weight: 500;
+			}
+
+			.auth-form input {
+				width: 100%;
+				padding: 0.8rem;
+				border: none;
+				border-radius: 8px;
+				font-size: 1rem;
+				background-color: rgba(255, 255, 255, 0.1);
+				color: white;
+				outline: none;
+			}
+
+			.auth-form input:focus {
+				background-color: rgba(255, 255, 255, 0.2);
+			}
+
+			.auth-form button {
+				width: 100%;
+				padding: 1rem;
+				border: none;
+				border-radius: 8px;
+				background-color: #ffcc00;
+				color: #333;
+				font-size: 1rem;
+				font-weight: 600;
+				cursor: pointer;
+				transition: all 0.3s;
+			}
+
+			.auth-form button:hover {
+				background-color: #ffd633;
+			}
+
+			.auth-footer {
+				text-align: center;
+				margin-top: 1.5rem;
+			}
+
+			.auth-footer a {
+				color: #ffcc00;
+				text-decoration: none;
+			}
+		</style>
+	</head>
+	<body class="default">
+		<header>
+			<nav>
+				<div class="logo">Weather<span>Cast</span></div>
+			</nav>
+		</header>
+
+		<main>
+			<div class="auth-container">
+				<h2>Login to Your Account</h2>
+				<form class="auth-form" id="login-form">
+					<div class="form-group">
+						<label for="login-email">Email</label>
+						<input type="email" id="login-email" required />
+					</div>
+					<div class="form-group">
+						<label for="login-password">Password</label>
+						<input type="password" id="login-password" required />
+					</div>
+					<button type="submit">Login</button>
+				</form>
+				<div class="auth-footer">
+					<p>Don't have an account? <a href="signup.html">Sign up</a></p>
+				</div>
+			</div>
+		</main>
+
+		<script src="js/auth.js"></script>
+	</body>
+</html>

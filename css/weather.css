@@ -1,0 +1,112 @@
+/* Weather Backgrounds */
+body.clear {
+    background: linear-gradient(135deg, #72b6f0, #5a9bd5);
+}
+
+body.clouds {
+    background: linear-gradient(135deg, #b3b3b3, #808080);
+}
+
+body.rain {
+    background: linear-gradient(135deg, #4a6b8a, #2c3e50);
+    position: relative;
+    overflow: hidden;
+}
+
+body.rain::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><line x1="20" y1="0" x2="20" y2="20" stroke="white" stroke-width="2"/></svg>') repeat;
+    opacity: 0.3;
+    animation: rain 0.5s linear infinite;
+}
+
+@keyframes rain {
+    to {
+        background-position: 0 100px;
+    }
+}
+
+body.thunderstorm {
+    background: linear-gradient(135deg, #1a1a2e, #16213e);
+    animation: lightning 10s infinite;
+}
+
+@keyframes lightning {
+    0%, 100% {
+        opacity: 1;
+    }
+    1%, 3%, 5%, 7%, 9% {
+        opacity: 0.5;
+    }
+    2%, 4%, 6%, 8% {
+        opacity: 1.5;
+    }
+}
+
+body.snow {
+    background: linear-gradient(135deg, #a8c0ff, #3f2b96);
+    position: relative;
+    overflow: hidden;
+}
+
+body.snow::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><circle cx="10" cy="10" r="1" fill="white"/></svg>') repeat;
+    opacity: 0.8;
+    animation: snow 10s linear infinite;
+}
+
+@keyframes snow {
+    to {
+        background-position: 0 100px;
+    }
+}
+
+body.mist, body.haze, body.fog {
+    background: linear-gradient(135deg, #c9d6ff, #e2e2e2);
+}
+
+/* Weather Icons */
+.fa-sun {
+    color: #ffcc00;
+}
+
+.fa-cloud {
+    color: #e6e6e6;
+}
+
+.fa-cloud-rain {
+    color: #a8c0ff;
+}
+
+.fa-bolt {
+    color: #ffcc00;
+    animation: flash 2s infinite;
+}
+
+@keyframes flash {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.3;
+    }
+}
+
+.fa-snowflake {
+    color: white;
+}
+
+.fa-smog {
+    color: #d3d3d3;
+}
